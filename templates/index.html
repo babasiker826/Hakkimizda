@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NABİ SYSTEM | Karanlik Sistemin Öncüleri</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .gold-text {
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .luxury-border {
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #FFD700, #FFA500, #FFD700) 1;
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        
+        .section {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #FFD700;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+
+    
+        .bot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .bot-item {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #FFD700;
+            transition: all 0.3s ease;
+        }
+
+        .bot-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 80px 5%;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .telegram-cta {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .telegram-link {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .telegram-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">NABİ SYSTEM</div>
+    </nav>
+
+    
+    <section class="hero">
+        <h1 class="gold-text">NABİ SYSTEM</h1>
+        <p>Türkiye'sunucusunda Sistemlerin Karanlik, teknolojinin sınırlarını zorluyoruz. İnovasyon ve kalite odaklı çözümlerimizle sektöre yön veriyoruz.</p>
+        <a href="#about" class="telegram-link">Bizi Tanıyın</a>
+    </section>
+
+    
+    <section id="about" class="section">
+        <h2 class="section-title gold-text">BİZ KİMİZ?</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🚀 VİZYONUMUZ</h3>
+                <p>Türkiye'nin en ileri Sistemin Karanlik yuzu olan ekibi olarak, sürekli gelişen ve yenilikçi çözümler üreten bir platform inşa ediyoruz. Her projemizde "ilk" olmanın gururunu yaşıyoruz.</p>
+            </div>
+            <div class="service-card">
+                <h3>💎 DEĞERLERİMİZ</h3>
+                <p>Kalite, güvenilirlik ve sürekli inovasyon. Kullanıcılarımıza premium deneyim sunmak ve sektörde fark yaratmak temel prensibimizdir.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏆 BAŞARILARIMIZ</h3>
+                <p>Türkiye'de ilk kez hayata geçirdiğimiz projelerle sektöre damga vurduk. 100'den fazla API servisi ve premium araçlarla hizmet veriyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="section">
+        <h2 class="section-title gold-text">NELER YAPIYORUZ?</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🔧 GELİŞMİŞ API SİSTEMLERİ</h3>
+                <p>101 farklı API servisi ile Türkiye'nin en kapsamlı API altyapısını sunuyoruz. kart sistemlerimiz, yapay zeka entegrasyonları ve daha fazlası...</p>
+            </div>
+            <div class="service-card">
+                <h3>🤖 YAPAY ZEKA TEKNOLOJİLERİ</h3>
+                <p>GPT-5 Mini, GPT-4, DeepSeek, Gemini 1.5 Pro gibi en son AI modellerini entegre ederek yapay zeka alanında öncü çözümler geliştiriyoruz.</p>
+            </div>
+            <div class="service-card">
+                <h3>💳 Kart Sistemlerimiz</h3>
+                <p>İyzico entegreli premium CC Checker sistemleri ve güvenli ödeme çözümleri ile sektörde güvenilir bir marka olduk.</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="section">
+        <h2 class="section-title gold-text">BOT ARSİVİMİZ</h2>
+        <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Profesyonel kullanıma uygun 20+ farklı bot geliştirdik</p>
+        
+        <div class="bot-grid">
+            <div class="bot-item">Hesap Çekme & Log Botu</div>
+            <div class="bot-item">Referans Hesap Botu</div>
+            <div class="bot-item">LGS-YKS-KPSS Sorgu Botu</div>
+            <div class="bot-item">Worm GPT Bot</div>
+            <div class="bot-item">Tabii Checker Bot</div>
+            <div class="bot-item">Takipçi Botu</div>
+            <div class="bot-item">Multichecker (18+)</div>
+            <div class="bot-item">CC Checker Bot</div>
+            <div class="bot-item">Telegram Üye Botu</div>
+            <div class="bot-item">IG Phishing Bot</div>
+            <div class="bot-item">Numara Bilme Botu</div>
+            <div class="bot-item">SMS Bomber Bot</div>
+            <div class="bot-item">Bedava Sorgu Botu (70+)</div>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <h2 class="section-title gold-text">TEKNOLOJİ ALT YAPIMIZ</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>📊 VERİ TABANLARI</h3>
+                <p>27 milyon+ Telegram CSV verisi ve diger datalar ve scriptler ve apilere sahibiz</p>
+            </div>
+            <div class="service-card">
+                <h3>🌐 PROXY AĞI</h3>
+                <p>100'den fazla proxy ile desteklenen sağlam altyapımız sayesinde kesintisiz hizmet sunuyoruz.</p>
+            </div>
+            <div class="service-card">
+                <h3>⚡ HIZ & PERFORMANS</h3>
+                <p>Yüksek performanslı sunucular ve optimize edilmiş kodlar ile en hızlı sorgu sistemlerini sunuyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2 class="telegram-cta gold-text">🚀 BİZE KATILIN</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Tüm bu araçlardan, botlardan, API'lerden ve premium hizmetlerimizden yararlanmak için resmi Telegram kanalımıza katılın.
+        </p>
+        <a href="https://t.me/nabisystem" class="telegram-link">@nabisystem KANALINA KATIL</a>
+        <p style="margin-top: 50px; opacity: 0.7; font-size: 1.1rem;">
+            &copy; 2025 NABİ SYSTEM - Sistemin Karanlik Yüzü
+        </p>
+    </footer>
+</body>
+</html>
